@@ -1,5 +1,5 @@
 {{-- start TOP --}}
-@include('include.top')
+@include('dashboard.include.top')
 {{-- end TOP --}}
 
 
@@ -7,17 +7,17 @@
 <div class="container-scroller">
 
     {{-- start NAV --}}
-    @include('include.nav')
+    @include('dashboard.include.nav')
     {{-- end NAV --}}
 
     <div class="container-fluid page-body-wrapper">
 
         {{-- start TODO --}}
-        @include('include.todo')
+        @include('dashboard.include.todo')
         {{-- end TODO --}}
 
         {{-- start SIDE --}}
-        @include('include.side')
+        @include('dashboard.include.side')
         {{-- end SIDE --}}
         @yield('content')
     </div>
@@ -26,11 +26,11 @@
 </div>
 
 {{-- start FOOTER --}}
-@include('include.footer')
+@include('dashboard.include.footer')
 {{-- end FOOTER --}}
 
 
 
 {{-- start BOTTOM --}}
-@include('include.bottom')
+@include('dashboard.include.bottom')
 {{-- end BOTTOM --}}

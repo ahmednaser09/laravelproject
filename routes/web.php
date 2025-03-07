@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('layout.mainBody');
+    return view('home.layout.mainBody');
 });
 Route::get('/charts', function () {
-    return view('layout.charts');
+    return view('dashboard.layout.charts');
 });
 Route::get('/tables', function () {
-    return view('layout.tables');
+    return view('dashboard.layout.tables');
 });
