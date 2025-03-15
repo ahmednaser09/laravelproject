@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +18,12 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('home.layout.mainBody');
+    return view('dashboard.layout.mainBody');
 });
 Route::get('/charts', function () {
     return view('dashboard.layout.charts');
 });
-Route::get('/tables', function () {
-    return view('dashboard.layout.tables');
-});
+
+
+
+Route::resource('users', UserController::class);
