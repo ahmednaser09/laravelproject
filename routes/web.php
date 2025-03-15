@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::get('/charts', function () {
     return view('dashboard.layout.charts');
 });
+Route::get('/home', function () {
+    return view('home.layout.mainBody');
+});
 
 
 
