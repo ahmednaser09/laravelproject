@@ -23,4 +23,4 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
-<body>
+<body><?php /**PATH C:\Users\user\Desktop\laravelproject\resources\views/dashboard/include/top.blade.php ENDPATH**/ ?>

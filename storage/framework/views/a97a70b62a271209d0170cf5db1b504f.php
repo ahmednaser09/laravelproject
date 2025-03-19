@@ -26,3 +26,4 @@
 </body>
 
 </html>
+<?php /**PATH C:\Users\user\Desktop\laravelproject\resources\views/dashboard/include/bottom.blade.php ENDPATH**/ ?>

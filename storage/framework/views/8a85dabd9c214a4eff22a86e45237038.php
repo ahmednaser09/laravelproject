@@ -35,4 +35,4 @@
             </div>
         </div>
     </div>
-</div>
+</div><?php /**PATH C:\Users\user\Desktop\laravelproject\resources\views/home/include/heroSection.blade.php ENDPATH**/ ?>
