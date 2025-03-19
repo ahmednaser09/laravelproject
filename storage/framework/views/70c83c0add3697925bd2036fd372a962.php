@@ -29,12 +29,12 @@
                                         
                                         <td><?php echo e($user->role); ?></td>
                                         <td>
-                                            <a class="btn btn-primary" href="<?php echo e(route('users.edit', $user->id)); ?>" class="btn">Edit</a>
+                                            <a href="<?php echo e(route('users.edit', $user->id)); ?>" class="btn">Edit</a>
                                             <form action="<?php echo e(route('users.destroy', $user->id)); ?>" method="POST"
                                                 style="display:inline;">
                                                 <?php echo csrf_field(); ?>
                                                 <?php echo method_field('DELETE'); ?>
-                                                <button type="submit" class="btn btn-danger"
+                                                <button type="submit"
                                                     onclick="return confirm('Are you sure you want to delete this record?');">Delete</button>
                                             </form>
                                         </td>
@@ -54,4 +54,4 @@
     </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('dashboard.dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\user\Desktop\laravelproject\resources\views/dashboard/layout/users/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('dashboard.dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Orange\Desktop\laravelproject\resources\views/dashboard/layout/users/index.blade.php ENDPATH**/ ?>

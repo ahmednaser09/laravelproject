@@ -1,6 +1,4 @@
-@extends('dashboard.dashboard')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="main-panel">
 
         <div class=" grid-margin stretch-card">
@@ -17,40 +15,42 @@
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                  {{-- <th>Password</th> --}}
-                                    <th>Role</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($users as $user)
+                                <?php $__currentLoopData = $contacts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $contact): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
-                                        <td>{{ $user->id }}</td>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
-                                        {{-- <td>{{ $user->password }}</td> --}}
-                                        <td>{{ $user->role }}</td>
+                                        <td><?php echo e($contact->id); ?></td>
+                                        <td><?php echo e($contact->name); ?></td>
+                                        <td><?php echo e($contact->email); ?></td>
+                                        <td><?php echo e($contact->subject); ?></td>
+                                        <td><?php echo e($contact->message); ?></td>
                                         <td>
-                                            <a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}" class="btn">Edit</a>
-                                            <form action="{{ route('users.destroy', $user->id) }}" method="POST"
+                                            <form action="<?php echo e(route('contacts.destroy', $contact->id)); ?>" method="POST"
                                                 style="display:inline;">
-                                                @csrf
-                                                @method('DELETE')
+                                                <?php echo csrf_field(); ?>
+                                                <?php echo method_field('DELETE'); ?>
                                                 <button type="submit" class="btn btn-danger"
                                                     onclick="return confirm('Are you sure you want to delete this record?');">Delete</button>
                                             </form>
                                         </td>
                                     </tr>
-                                @endforeach
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </tbody>
                         </table>
                     </div>
                     <div class="d-flex justify-content-center align-items-center">
-                        {{ $users->links('pagination::bootstrap-4') }}
+                        <?php echo e($contacts->links('pagination::bootstrap-4')); ?>
+
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('dashboard.dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\user\Desktop\laravelproject\resources\views/dashboard/layout/indexcontact.blade.php ENDPATH**/ ?>

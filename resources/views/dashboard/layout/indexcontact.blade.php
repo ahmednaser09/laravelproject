@@ -17,22 +17,21 @@
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                  {{-- <th>Password</th> --}}
-                                    <th>Role</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($users as $user)
+                                @foreach ($contacts as $contact)
                                     <tr>
-                                        <td>{{ $user->id }}</td>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
-                                        {{-- <td>{{ $user->password }}</td> --}}
-                                        <td>{{ $user->role }}</td>
+                                        <td>{{ $contact->id }}</td>
+                                        <td>{{ $contact->name }}</td>
+                                        <td>{{ $contact->email }}</td>
+                                        <td>{{ $contact->subject }}</td>
+                                        <td>{{ $contact->message }}</td>
                                         <td>
-                                            <a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}" class="btn">Edit</a>
-                                            <form action="{{ route('users.destroy', $user->id) }}" method="POST"
+                                            <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST"
                                                 style="display:inline;">
                                                 @csrf
                                                 @method('DELETE')
@@ -46,7 +45,7 @@
                         </table>
                     </div>
                     <div class="d-flex justify-content-center align-items-center">
-                        {{ $users->links('pagination::bootstrap-4') }}
+                        {{ $contacts->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>

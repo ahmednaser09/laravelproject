@@ -69,4 +69,4 @@
             </div>
         </div>
     </div>
-    <!-- Navbar & Hero End --><?php /**PATH C:\Users\user\Desktop\laravelproject\resources\views/home/include/nav.blade.php ENDPATH**/ ?>
+    <!-- Navbar & Hero End --><?php /**PATH C:\Users\Orange\Desktop\laravelproject\resources\views/home/include/nav.blade.php ENDPATH**/ ?>

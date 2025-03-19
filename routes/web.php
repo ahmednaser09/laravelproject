@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 /*
@@ -26,7 +27,16 @@ Route::get('/charts', function () {
 Route::get('/home', function () {
     return view('home.layout.mainBody');
 });
+Route::get('/contact', function () {
+    return view('home.layout.create');
+});
 
-
+// Route::get('/tables', function () {
+//     return view('dashboard.layout.tables');
+// });
+Route::get('/contacts', function () {
+    return view('dashboard.layout.indexcontact');
+});
+Route::resource('contacts',ContactsController::class);
 
 Route::resource('users', UserController::class);
